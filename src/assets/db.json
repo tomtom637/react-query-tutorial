@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "age": 7,
+    "hairColor": "brown",
+    "eyeColor": "brown",
+    "favoriteIceCream": "strawberry"
+  },
+  {
+    "id": 2,
+    "name": "Boubou",
+    "age": 2,
+    "hairColor": "brown",
+    "eyeColor": "brown",
+    "favoriteIceCream": "vanilla"
+  },
+  {
+    "id": 3,
+    "name": "Pia",
+    "age": 46,
+    "hairColor": "black",
+    "eyeColor": "brown",
+    "favoriteIceCream": "chocolate"
+  },
+  {
+    "id": 4,
+    "name": "Thomas",
+    "age": 39,
+    "hairColor": "blond",
+    "eyeColor": "green",
+    "favoriteIceCream": "orange"
+  }
+]

@@ -1,0 +1,3 @@
+[ ] add JSON server to the project and replace call to JSON file to calls to the JSON server
+
+resume tutorial lesson on lesson 14 https://www.youtube.com/watch?v=2s2iJLLDwgk&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2&index=14

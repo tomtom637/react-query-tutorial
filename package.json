@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "json": "json-server --watch src/assets/db.json --port 3001",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

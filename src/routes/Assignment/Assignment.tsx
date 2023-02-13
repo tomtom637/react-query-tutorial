@@ -15,7 +15,7 @@ type Person = {
 };
 
 async function fetchPersonData(): Promise<Person[]> {
-  return fetch("src/assets/db.json").then(response => {
+  return fetch("http://localhost:3001/people").then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

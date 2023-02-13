@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // HOOKS
 import useGetPersons from "@/hooks/useGetPersons";
@@ -44,8 +45,12 @@ export default function Assignment2(): JSX.Element {
           }}
         >
           {data &&
-            data.map(person => (
-              <div key={person.id} style={{ flexGrow: "1" }}>
+            data.map((person) => (
+              <Link
+                to={`/person/${person.id}`}
+                key={person.id}
+                style={{ flexGrow: "1" }}
+              >
                 <h3
                   style={{
                     borderBottom: "1px solid deeppink",
@@ -59,7 +64,7 @@ export default function Assignment2(): JSX.Element {
                 <p>hair: {person.hairColor}</p>
                 <p>eye: {person.eyeColor}</p>
                 <p>Ice cream: {person.favoriteIceCream}</p>
-              </div>
+              </Link>
             ))}
         </div>
       </main>

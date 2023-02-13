@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
-//import db from "@/assets/db.json";
 
 // COMPONENTS
 import Navbar from "@/components/NavBar/NavBar";
@@ -15,7 +14,7 @@ type Person = {
 };
 
 async function fetchPersonData(): Promise<Person[]> {
-  return fetch("http://localhost:3001/people").then(response => {
+  return fetch("http://localhost:3001/people").then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -46,45 +45,40 @@ export default function Assignment(): JSX.Element {
     }
   );
 
-  if (isLoading) return <p>Loading...</p>;
-
-  if (isError && error instanceof Error)
-    return <p>There seems to be an error: {error.message}</p>;
-
-  if (data) {
-    return (
-      <>
-        <Navbar />
-        <main>
-          <div
-            style={{
-              display: "flex",
-              gap: "40px",
-              flexWrap: "wrap",
-            }}
-          >
-            {data.map((person: Person) => (
-              <div key={person.id} style={{ flexGrow: "1" }}>
-                <h3
-                  style={{
-                    borderBottom: "3px solid deeppink",
-                    marginBlockEnd: "10px",
-                    display: "inline-block",
-                  }}
-                >
-                  {person.name}
-                </h3>
-                <p>age: {person.age}</p>
-                <p>hair: {person.hairColor}</p>
-                <p>eye: {person.eyeColor}</p>
-                <p>Ice cream: {person.favoriteIceCream}</p>
-              </div>
-            ))}
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  return <p>Not found</p>;
+  return (
+    <>
+      <Navbar />
+      <main>
+        <div
+          style={{
+            display: "flex",
+            gap: "40px",
+            flexWrap: "wrap",
+          }}
+        >
+          {isLoading && <p>Loading...</p>}
+          {isError && error instanceof Error && (
+            <p>There seems to be an error: {error.message}</p>
+          )}
+          {data?.map((person: Person) => (
+            <div key={person.id} style={{ flexGrow: "1" }}>
+              <h3
+                style={{
+                  borderBottom: "3px solid deeppink",
+                  marginBlockEnd: "10px",
+                  display: "inline-block",
+                }}
+              >
+                {person.name}
+              </h3>
+              <p>age: {person.age}</p>
+              <p>hair: {person.hairColor}</p>
+              <p>eye: {person.eyeColor}</p>
+              <p>Ice cream: {person.favoriteIceCream}</p>
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
+  );
 }

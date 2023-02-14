@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useQuery } from "react-query";
 
 // HOOKS
@@ -17,6 +17,17 @@ export default function PersonId(): JSX.Element {
     <>
       <Navbar />
       <main>
+        <Link to="/assignment2">
+          <button
+            style={{
+              padding: "2px 10px",
+              marginBlockEnd: "15px",
+              backgroundColor: "#444",
+            }}
+          >
+            Go back
+          </button>
+        </Link>
         <div
           style={{
             display: "flex",

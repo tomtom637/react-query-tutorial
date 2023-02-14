@@ -31,7 +31,11 @@ export default function Assignment2(): JSX.Element {
       <Navbar />
       <main>
         <button
-          style={{ padding: "2px 10px", marginBlockEnd: "15px" }}
+          style={{
+            padding: "2px 10px",
+            marginBlockEnd: "15px",
+            backgroundColor: "#444",
+          }}
           onClick={handleClick}
           disabled={disabled}
         >
@@ -45,7 +49,7 @@ export default function Assignment2(): JSX.Element {
           }}
         >
           {data &&
-            data.map((person) => (
+            data.map(person => (
               <Link
                 to={`/person/${person.id}`}
                 key={person.id}

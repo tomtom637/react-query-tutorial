@@ -1,13 +1,6 @@
 import { useQuery } from "react-query";
+import { Person } from "../types/Person";
 
-type Person = {
-  id: number;
-  name: string;
-  age: number;
-  hairColor: string;
-  eyeColor: string;
-  favoriteIceCream: string;
-};
 
 type Props = {
   onSuccess?: (data: Person[]) => void;

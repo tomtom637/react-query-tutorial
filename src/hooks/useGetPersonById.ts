@@ -1,13 +1,5 @@
-import { useQuery, QueryFunctionContext } from "react-query";
-
-type Person = {
-  personId: number;
-  name: string;
-  age: number;
-  hairColor: string;
-  eyeColor: string;
-  favoriteIceCream: string;
-};
+import { useQuery, QueryFunctionContext, useQueryClient } from "react-query";
+import { Person } from "@/types/Person";
 
 type Props = {
   personId: number;
@@ -33,10 +25,21 @@ export default function useGetPersons({
   enabled
 }: Props
 ) {
+  const queryClient = useQueryClient();
   return useQuery(
     ["personById", personId],
     fetchPersonData,
     {
+      initialData: () => {
+        console.log(queryClient.getQueryData<Person[]>("personDataFromHook"));
+        const selectedPerson = queryClient.getQueryData<Person[]>("personDataFromHook")
+          ?.find(person => person.id === personId);
+        if (selectedPerson) {
+          return selectedPerson;
+        } else {
+          return undefined;
+        }
+      },
       onSuccess,
       onError,
       enabled

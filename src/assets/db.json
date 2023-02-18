@@ -1,36 +1,52 @@
 {
   "people": [
-  {
-    "id": 1,
-    "name": "Alice",
-    "age": 7,
-    "hairColor": "brown",
-    "eyeColor": "brown",
-    "favoriteIceCream": "strawberry"
-  },
-  {
-    "id": 2,
-    "name": "Boubou",
-    "age": 2,
-    "hairColor": "brown",
-    "eyeColor": "brown",
-    "favoriteIceCream": "vanilla"
-  },
-  {
-    "id": 3,
-    "name": "Pia",
-    "age": 46,
-    "hairColor": "black",
-    "eyeColor": "brown",
-    "favoriteIceCream": "chocolate"
-  },
-  {
-    "id": 4,
-    "name": "Thomas",
-    "age": 39,
-    "hairColor": "blond",
-    "eyeColor": "green",
-    "favoriteIceCream": "orange"
-  }
-]
+    {
+      "id": 1,
+      "name": "Alice",
+      "age": 7,
+      "hairColor": "brown",
+      "eyeColor": "brown",
+      "favoriteIceCream": "strawberry"
+    },
+    {
+      "id": 2,
+      "name": "Boubou",
+      "age": 2,
+      "hairColor": "brown",
+      "eyeColor": "brown",
+      "favoriteIceCream": "vanilla"
+    },
+    {
+      "id": 3,
+      "name": "Pia",
+      "age": 46,
+      "hairColor": "black",
+      "eyeColor": "brown",
+      "favoriteIceCream": "chocolate"
+    },
+    {
+      "id": 4,
+      "name": "Thomas",
+      "age": 39,
+      "hairColor": "blond",
+      "eyeColor": "green",
+      "favoriteIceCream": "orange"
+    },
+    {
+      "name": "Olivier",
+      "age": "42",
+      "hairColor": "brown",
+      "eyeColor": "brown",
+      "favoriteIceCream": "cognac",
+      "id": 5
+    },
+    {
+      "name": "Roger",
+      "age": "73",
+      "hairColor": "white",
+      "eyeColor": "brown",
+      "favoriteIceCream": "vanilla",
+      "id": 6
+    }
+  ]
 }

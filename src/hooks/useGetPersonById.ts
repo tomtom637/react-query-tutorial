@@ -31,7 +31,6 @@ export default function useGetPersons({
     fetchPersonData,
     {
       initialData: () => {
-        console.log(queryClient.getQueryData<Person[]>("personDataFromHook"));
         const selectedPerson = queryClient.getQueryData<Person[]>("personDataFromHook")
           ?.find(person => person.id === personId);
         if (selectedPerson) {
